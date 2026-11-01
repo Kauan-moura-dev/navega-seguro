@@ -24,7 +24,7 @@ const FONTE = "Arial";
 const AUTOR = "KAUAN CASTRO MOURA";
 const RA = "2223202665";
 const TITULO = "NAVEGA SEGURO:";
-const SUBTITULO = "portal de segurança digital para pessoas idosas";
+const SUBTITULO = "portal de segurança digital para pessoas com pouca familiaridade com a internet";
 const ORIENTADORA = "Prof.ª Debora Virgilia Canne";
 
 // ---------- helpers ----------
@@ -171,27 +171,27 @@ const folhaAprovacao = [
   ...assinatura("Prof.(ª) _____________________________", "Instituição: __________________________"),
 ];
 
-const textoResumo = "O presente trabalho apresenta o desenvolvimento do Projeto de Extensão intitulado Navega Seguro, voltado ao atendimento de pessoas idosas que utilizam a internet e estão expostas a golpes digitais. O objetivo principal consiste em criar uma solução de software web, educativa e acessível, capaz de auxiliar esse público a reconhecer tentativas de fraude, criar senhas mais seguras e adotar cuidados básicos de navegação. A pesquisa parte da constatação de que a população com 60 anos ou mais apresenta a menor proporção de usuários de internet entre as faixas etárias brasileiras e de que golpistas exploram a engenharia social para enganar suas vítimas. A metodologia adotada apoia-se no método Kanban para organização das tarefas, no levantamento de requisitos funcionais e não funcionais, na modelagem por meio de diagramas de casos de uso, de classes e de entidade-relacionamento e na implementação com HTML5, CSS3 e JavaScript, sem dependência de servidor. O sistema oferece dicas de segurança organizadas por categoria, um verificador de força de senha executado apenas no navegador, um questionário interativo do tipo “É golpe?” com explicações após cada resposta e recursos de acessibilidade, como ampliação do texto e modo de alto contraste. Os testes funcionais automatizados confirmaram o funcionamento de todos os requisitos verificados, e a validação com o público-alvo prevê a participação de dois a três familiares do autor. Conclui-se que soluções simples, construídas com tecnologias web abertas, podem contribuir para a inclusão digital segura de pessoas idosas, aproximando a formação universitária das necessidades da comunidade.";
+const textoResumo = "O presente trabalho apresenta o desenvolvimento do Projeto de Extensão intitulado Navega Seguro, voltado a adultos e idosos com pouca familiaridade com a internet e, por isso, mais expostos a golpes digitais. O objetivo principal consiste em criar uma solução de software web, educativa e acessível, capaz de auxiliar esse público a reconhecer tentativas de fraude, criar senhas mais seguras e adotar cuidados básicos de navegação. A pesquisa parte da constatação de que golpistas exploram a engenharia social para enganar suas vítimas e de que parte da população, especialmente as pessoas com 60 anos ou mais, ainda tem acesso limitado à internet. A metodologia adotada apoia-se no método Kanban para organização das tarefas, no levantamento de requisitos funcionais e não funcionais, na modelagem por meio de diagramas de casos de uso, de classes e de entidade-relacionamento e na implementação com HTML5, CSS3 e JavaScript, sem servidor próprio. O sistema oferece dicas de segurança organizadas por categoria, um verificador de força de senha executado apenas no navegador, um questionário interativo do tipo “É golpe?” com explicações e opção de sinalizar erros, uma seção de notícias recentes sobre golpes e recursos de acessibilidade, como ampliação do texto e modo de alto contraste. Os testes funcionais automatizados confirmaram o funcionamento de todos os requisitos verificados. A validação foi realizada com duas familiares do autor, de 45 e 40 anos, que obtiveram oito e seis acertos em oito situações do questionário, avaliaram o site como relevante e informativo e sugeriram uma opção para sinalizar respostas incorretas, implementada na versão final. Conclui-se que soluções simples, construídas com tecnologias web abertas, podem contribuir para o uso mais seguro da internet, aproximando a formação universitária das necessidades da comunidade.";
 
 const resumo = [
   h1("RESUMO", { center: true }),
   p(textoResumo, { noIndent: true }),
   ...vazio(1),
-  p([t("Palavras-chave: ", { bold: true }), t("Desenvolvimento de Software. Projeto de Extensão. Segurança Digital. Pessoa Idosa. Acessibilidade.")], { noIndent: true, align: AlignmentType.LEFT }),
+  p([t("Palavras-chave: ", { bold: true }), t("Desenvolvimento de Software. Projeto de Extensão. Segurança Digital. Inclusão Digital. Acessibilidade.")], { noIndent: true, align: AlignmentType.LEFT }),
 ];
 
-const textoAbstract = "This work presents the development of the Extension Project entitled Navega Seguro, aimed at serving older adults who use the internet and are exposed to digital scams. The main objective is to create an educational and accessible web software solution capable of helping this audience recognize fraud attempts, create safer passwords and adopt basic browsing precautions. The research starts from the observation that the population aged 60 or over has the lowest proportion of internet users among Brazilian age groups and that scammers exploit social engineering to deceive their victims. The methodology is based on the Kanban method for task organization, on the elicitation of functional and non-functional requirements, on modeling through use case, class and entity-relationship diagrams and on the implementation with HTML5, CSS3 and JavaScript, without dependence on a server. The system offers security tips organized by category, a password strength checker executed only in the browser, an interactive “Is it a scam?” quiz with explanations after each answer and accessibility features, such as text enlargement and a high contrast mode. Automated functional tests confirmed the operation of all verified requirements, and the validation with the target audience includes the participation of two to three of the author’s relatives. It is concluded that simple solutions, built with open web technologies, can contribute to the safe digital inclusion of older adults, bringing university education closer to the needs of the community.";
+const textoAbstract = "This work presents the development of the Extension Project entitled Navega Seguro, aimed at adults and older adults with little familiarity with the internet and, therefore, more exposed to digital scams. The main objective is to create an educational and accessible web software solution capable of helping this audience recognize fraud attempts, create safer passwords and adopt basic browsing precautions. The research starts from the observation that scammers exploit social engineering to deceive their victims and that part of the population, especially people aged 60 or over, still has limited access to the internet. The methodology is based on the Kanban method for task organization, on the elicitation of functional and non-functional requirements, on modeling through use case, class and entity-relationship diagrams and on the implementation with HTML5, CSS3 and JavaScript, without its own server. The system offers security tips organized by category, a password strength checker executed only in the browser, an interactive “Is it a scam?” quiz with explanations and an option to report errors, a section with recent news about scams and accessibility features, such as text enlargement and a high contrast mode. Automated functional tests confirmed the operation of all verified requirements. The validation was carried out with two of the author’s relatives, aged 45 and 40, who scored eight and six correct answers out of eight quiz situations, rated the website as relevant and informative and suggested an option to report incorrect answers, which was implemented in the final version. It is concluded that simple solutions, built with open web technologies, can contribute to a safer use of the internet, bringing university education closer to the needs of the community.";
 
 const abstract = [
   h1("ABSTRACT", { center: true }),
   p(textoAbstract, { noIndent: true }),
   ...vazio(1),
-  p([t("Keywords: ", { bold: true }), t("Software Development. Extension Project. Digital Security. Older Adults. Accessibility.")], { noIndent: true, align: AlignmentType.LEFT }),
+  p([t("Keywords: ", { bold: true }), t("Software Development. Extension Project. Digital Security. Digital Inclusion. Accessibility.")], { noIndent: true, align: AlignmentType.LEFT }),
 ];
 
 const SUMARIO = [
   ["1 INTRODUÇÃO", "s1", 1], ["1.1 CONTEXTUALIZAÇÃO E JUSTIFICATIVA DE EXTENSÃO", "s11", 2], ["1.2 PROBLEMATIZAÇÃO", "s12", 2], ["1.3 OBJETIVOS", "s13", 2],
-  ["2 REVISÃO BIBLIOGRÁFICA E FUNDAMENTAÇÃO TEÓRICA", "s2", 1], ["2.1 EXTENSÃO UNIVERSITÁRIA", "s21", 2], ["2.2 INCLUSÃO DIGITAL E A PESSOA IDOSA", "s22", 2],
+  ["2 REVISÃO BIBLIOGRÁFICA E FUNDAMENTAÇÃO TEÓRICA", "s2", 1], ["2.1 EXTENSÃO UNIVERSITÁRIA", "s21", 2], ["2.2 INCLUSÃO DIGITAL", "s22", 2],
   ["2.3 SEGURANÇA DIGITAL DO USUÁRIO FINAL", "s23", 2], ["2.4 ENGENHARIA DE SOFTWARE E REQUISITOS", "s24", 2], ["2.5 TECNOLOGIAS WEB", "s25", 2], ["2.6 ACESSIBILIDADE E USABILIDADE", "s26", 2],
   ["3 COMUNIDADE ATENDIDA E IMPACTO SOCIAL", "s3", 1],
   ["4 ESPECIFICAÇÃO DO SISTEMA E REQUISITOS", "s4", 1], ["4.1 REQUISITOS FUNCIONAIS (RF)", "s41", 2], ["4.2 REQUISITOS NÃO FUNCIONAIS (RNF)", "s42", 2],
@@ -208,35 +208,35 @@ const sumario = [h1("SUMÁRIO", { center: true }), ...SUMARIO.map(([a, b, c]) =>
 // =====================================================================
 const cap1 = [
   h1("1 INTRODUÇÃO", { pageBreak: false }),
-  p("A ampliação do acesso à internet trouxe benefícios importantes para a vida cotidiana, como a comunicação com familiares, o acesso a serviços bancários e a realização de compras sem sair de casa. Esse mesmo ambiente, porém, tornou-se espaço para golpes que exploram a confiança e a pouca familiaridade de parte dos usuários com as tecnologias digitais, situação que afeta de forma particular as pessoas idosas."),
-  p("Diante desse cenário, este Projeto de Extensão propõe o Navega Seguro, um portal web educativo e acessível destinado a pessoas idosas. A aplicação reúne dicas de segurança digital, um verificador de força de senha e um questionário interativo que apresenta situações do dia a dia para que o usuário identifique se se trata de golpe ou de uma prática segura. O escopo do software é deliberadamente simples: funciona em qualquer navegador moderno, não exige cadastro e não envia dados para servidores, o que facilita o uso pelo público-alvo e sua publicação gratuita."),
+  p("A ampliação do acesso à internet trouxe benefícios importantes para a vida cotidiana, como a comunicação com familiares, o acesso a serviços bancários e a realização de compras sem sair de casa. Esse mesmo ambiente, porém, tornou-se espaço para golpes que exploram a confiança e a pouca familiaridade de parte dos usuários com as tecnologias digitais, situação que afeta tanto pessoas idosas quanto adultos que começaram a usar a internet recentemente ou que a utilizam apenas para tarefas básicas."),
+  p("Diante desse cenário, este Projeto de Extensão propõe o Navega Seguro, um portal web educativo e acessível destinado a pessoas com pouca familiaridade com a internet. A aplicação reúne dicas de segurança digital, um verificador de força de senha, um questionário interativo que apresenta situações do dia a dia para que o usuário identifique se se trata de golpe ou de uma prática segura e uma seção com notícias recentes sobre golpes. O escopo do software é deliberadamente simples: funciona em qualquer navegador moderno, não exige cadastro, não envia os dados digitados pelo usuário e pode ser publicado gratuitamente."),
 
   h2("1.1 CONTEXTUALIZAÇÃO E JUSTIFICATIVA DE EXTENSÃO"),
-  p("A extensão na educação superior é compreendida como atividade que articula ensino e pesquisa e promove a interação transformadora entre as instituições de ensino superior e os demais setores da sociedade (BRASIL, 2018). Nesse sentido, o projeto aproxima o conhecimento adquirido no curso de Ciência da Computação da Universidade Nove de Julho (UNINOVE) de uma necessidade concreta da comunidade: a proteção de pessoas idosas contra fraudes digitais."),
-  p("A relevância social da proposta é reforçada pelos indicadores nacionais. Segundo a pesquisa TIC Domicílios 2024, 89% da população brasileira com 10 anos ou mais era usuária de internet, enquanto na faixa de 60 anos ou mais esse percentual era de 63%, o menor entre todas as faixas etárias investigadas (NIC.BR, 2024). A menor familiaridade com o ambiente digital, somada ao uso crescente de serviços online, torna esse público alvo frequente de golpistas. Ao oferecer orientação clara e prática, a tecnologia desenvolvida contribui para a autonomia e a segurança dos usuários idosos."),
+  p("A extensão na educação superior é compreendida como atividade que articula ensino e pesquisa e promove a interação transformadora entre as instituições de ensino superior e os demais setores da sociedade (BRASIL, 2018). Nesse sentido, o projeto aproxima o conhecimento adquirido no curso de Ciência da Computação da Universidade Nove de Julho (UNINOVE) de uma necessidade concreta da comunidade: a proteção de pessoas com pouca experiência digital contra fraudes na internet."),
+  p("Os indicadores nacionais reforçam a relevância da proposta. Segundo a pesquisa TIC Domicílios 2024, 89% da população brasileira com 10 anos ou mais era usuária de internet, enquanto na faixa de 60 anos ou mais esse percentual era de 63%, o menor entre todas as faixas etárias investigadas (NIC.BR, 2024). Esses dados mostram que uma parcela relevante da população ainda está chegando ao ambiente digital. A menor experiência com a internet, seja por idade, seja por uso recente ou pouco frequente, torna esses usuários alvos frequentes de golpistas. Ao oferecer orientação clara e prática, a tecnologia desenvolvida contribui para a autonomia e a segurança desse público."),
 
   h2("1.2 PROBLEMATIZAÇÃO"),
   p("Os golpes digitais costumam empregar técnicas de engenharia social, isto é, exploram sentimentos como medo, confiança, vontade de ajudar e senso de urgência para levar a vítima a agir sem refletir (CERT.BR, 2026). Mensagens de falsos parentes que pedem transferências via Pix, ligações de supostas centrais bancárias que solicitam senhas e pedidos para repassar códigos de verificação recebidos por SMS são exemplos recorrentes dessas práticas."),
-  p("Somam-se a isso hábitos inseguros na criação de senhas, como o uso de sequências numéricas, datas de nascimento ou a mesma senha em vários serviços, comportamentos desaconselhados pelas orientações de segurança (CERT.BR, 2022). Muitas pessoas idosas não dispõem de um material acessível, com linguagem simples, letras grandes e exemplos práticos, que as ajude a reconhecer essas ameaças. O problema que orienta este projeto é, portanto: como apoiar pessoas idosas, por meio de uma solução de software simples e acessível, a identificar golpes digitais e a adotar práticas seguras na internet?"),
+  p("Somam-se a isso hábitos inseguros na criação de senhas, como o uso de sequências numéricas, datas de nascimento ou a mesma senha em vários serviços, comportamentos desaconselhados pelas orientações de segurança (CERT.BR, 2022). Muitas pessoas com pouca familiaridade digital não dispõem de um material acessível, com linguagem simples, letras grandes e exemplos práticos, que as ajude a reconhecer essas ameaças. O problema que orienta este projeto é, portanto: como apoiar pessoas com pouca familiaridade com a internet, por meio de uma solução de software simples e acessível, a identificar golpes digitais e a adotar práticas seguras?"),
 
   h2("1.3 OBJETIVOS"),
   h3("1.3.1 Objetivo Geral"),
-  p("Desenvolver uma aplicação web funcional e acessível que auxilie pessoas idosas a reconhecer golpes digitais, avaliar a força de senhas e adotar práticas seguras de navegação na internet."),
+  p("Desenvolver uma aplicação web funcional e acessível que auxilie adultos e idosos com pouca familiaridade com a internet a reconhecer golpes digitais, avaliar a força de senhas e adotar práticas seguras de navegação."),
   h3("1.3.2 Objetivos Específicos"),
   item("Mapear os requisitos funcionais e não funcionais da aplicação a partir das necessidades do público-alvo."),
   item("Prototipar e implementar a interface priorizando usabilidade e acessibilidade."),
-  item("Implementar o verificador de força de senha, o catálogo de dicas e o questionário interativo utilizando HTML5, CSS3 e JavaScript."),
+  item("Implementar o catálogo de dicas, o verificador de força de senha, o questionário interativo e a seção de notícias utilizando HTML5, CSS3 e JavaScript."),
   item("Testar o funcionamento do sistema por meio de testes funcionais."),
-  item("Validar a aplicação com dois a três familiares do autor pertencentes ao público-alvo e registrar suas percepções."),
+  item("Validar a aplicação com familiares do autor pertencentes ao público-alvo, registrar suas percepções e incorporar melhorias."),
 ];
 
 const cap2 = [
   h1("2 REVISÃO BIBLIOGRÁFICA E FUNDAMENTAÇÃO TEÓRICA"),
-  p("Este capítulo apresenta os conceitos que embasam o desenvolvimento do projeto, abrangendo extensão universitária, inclusão digital da pessoa idosa, segurança da informação voltada ao usuário final, engenharia de software, tecnologias web e acessibilidade."),
+  p("Este capítulo apresenta os conceitos que embasam o desenvolvimento do projeto, abrangendo extensão universitária, inclusão digital, segurança da informação voltada ao usuário final, engenharia de software, tecnologias web e acessibilidade."),
   h2("2.1 EXTENSÃO UNIVERSITÁRIA"),
   p("A Resolução CNE/CES nº 7, de 18 de dezembro de 2018, estabelece as diretrizes para a extensão na educação superior brasileira e a caracteriza como um processo interdisciplinar, educativo, cultural, científico e político, que deve integrar-se à matriz curricular e gerar impacto na formação do estudante e na sociedade (BRASIL, 2018). O presente trabalho insere-se nessa perspectiva ao aplicar conhecimentos de desenvolvimento de software a uma demanda social identificada."),
-  h2("2.2 INCLUSÃO DIGITAL E A PESSOA IDOSA"),
-  p("O Estatuto da Pessoa Idosa considera pessoa idosa aquela com idade igual ou superior a 60 anos (BRASIL, 2003). Os dados da pesquisa TIC Domicílios 2024 indicam que, embora a maior parte desse grupo já utilize a internet, 37% das pessoas com 60 anos ou mais ainda não eram usuárias da rede, proporção muito superior à observada nas demais faixas etárias (NIC.BR, 2024). Esse cenário evidencia a importância de iniciativas que promovam não apenas o acesso, mas o uso seguro e consciente das tecnologias digitais por esse público."),
+  h2("2.2 INCLUSÃO DIGITAL"),
+  p("A inclusão digital envolve não apenas o acesso à internet, mas também a capacidade de utilizá-la com autonomia e segurança. Os dados da pesquisa TIC Domicílios 2024 indicam diferenças importantes entre os grupos da população: enquanto praticamente todas as pessoas de 16 a 44 anos eram usuárias da rede, 37% das pessoas com 60 anos ou mais e 60% das pessoas analfabetas ou com educação infantil ainda não utilizavam a internet (NIC.BR, 2024). O Estatuto da Pessoa Idosa considera pessoa idosa aquela com idade igual ou superior a 60 anos (BRASIL, 2003). Esse cenário evidencia a importância de iniciativas que promovam o uso seguro e consciente das tecnologias digitais por quem ainda tem pouca experiência com elas, independentemente da idade."),
   h2("2.3 SEGURANÇA DIGITAL DO USUÁRIO FINAL"),
   p("De acordo com a Cartilha de Segurança para Internet, a engenharia social consiste em enganar uma pessoa explorando sentimentos como medo, obediência, confiança, carência, ganância, curiosidade e vontade de ajudar. Entre os sinais de alerta estão a ameaça, a pressa, o apelo afetivo, o pedido de segredo e ofertas boas demais para ser verdade; a recomendação central é confirmar a história com a pessoa ou a organização por meio de um contato oficial ou já conhecido (CERT.BR, 2026)."),
   p("No que se refere à autenticação, recomenda-se criar senhas longas, como a combinação de palavras aleatórias, misturar diferentes tipos de caracteres, evitar sequências de teclado e informações pessoais, não reutilizar a mesma senha em diferentes serviços, ativar a verificação em duas etapas e nunca compartilhar senhas ou códigos de verificação por mensagens, e-mails ou ligações (CERT.BR, 2022). Essas orientações fundamentaram o conteúdo das dicas, as regras do verificador de senha e as situações apresentadas no questionário."),
@@ -244,17 +244,22 @@ const cap2 = [
   p("A engenharia de software fornece processos, métodos e ferramentas para a construção de software de qualidade (PRESSMAN; MAXIM, 2016). Sommerville (2018) distingue os requisitos funcionais, que descrevem os serviços que o sistema deve oferecer e como deve reagir a determinadas entradas, dos requisitos não funcionais, que representam restrições e qualidades do sistema, como desempenho, usabilidade e segurança. Essa distinção foi adotada na especificação apresentada no capítulo 4."),
   p("Para a modelagem, utilizou-se a Linguagem de Modelagem Unificada (UML), por meio dos diagramas de casos de uso e de classes, além do Diagrama de Entidade-Relacionamento (DER) para representar a estrutura dos dados. A construção seguiu uma abordagem incremental, na qual o sistema é desenvolvido em partes que são testadas e incorporadas progressivamente (SOMMERVILLE, 2018)."),
   h2("2.5 TECNOLOGIAS WEB"),
-  p("A aplicação foi construída com as tecnologias padrão da web: a Linguagem de Marcação de Hipertexto (HTML5), responsável pela estrutura e pela semântica do conteúdo; as Folhas de Estilo em Cascata (CSS3), responsáveis pela apresentação visual e pela adaptação a diferentes tamanhos de tela; e a linguagem JavaScript, responsável pela interatividade. Por serem executadas diretamente pelo navegador, essas tecnologias dispensam instalação de programas pelo usuário e permitem a hospedagem gratuita em serviços de páginas estáticas, como o GitHub Pages."),
+  p("A aplicação foi construída com as tecnologias padrão da web: a Linguagem de Marcação de Hipertexto (HTML5), responsável pela estrutura e pela semântica do conteúdo; as Folhas de Estilo em Cascata (CSS3), responsáveis pela apresentação visual e pela adaptação a diferentes tamanhos de tela; e a linguagem JavaScript, responsável pela interatividade. Por serem executadas diretamente pelo navegador, essas tecnologias dispensam instalação de programas pelo usuário e permitem a hospedagem gratuita em serviços de páginas estáticas, como o GitHub Pages. A seção de notícias utiliza o formato RSS (Really Simple Syndication), padrão de distribuição de conteúdo usado por portais de notícias para disponibilizar suas publicações mais recentes."),
   h2("2.6 ACESSIBILIDADE E USABILIDADE"),
   p("As Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.2, publicadas pelo World Wide Web Consortium (W3C), organizam recomendações para tornar o conteúdo web mais acessível a pessoas com deficiência, incluindo pessoas idosas com alterações de visão, audição, mobilidade ou cognição decorrentes do envelhecimento (W3C, 2025). As diretrizes estão estruturadas em quatro princípios: o conteúdo deve ser perceptível, operável, compreensível e robusto. No projeto, esses princípios orientaram decisões como o uso de texto ampliado, contraste adequado, foco visível na navegação por teclado, áreas de toque amplas e linguagem simples."),
 ];
 
 const cap3 = [
   h1("3 COMUNIDADE ATENDIDA E IMPACTO SOCIAL"),
-  p("O público-alvo do projeto é formado por pessoas idosas, isto é, com 60 anos ou mais (BRASIL, 2003), que utilizam celular ou computador para se comunicar, acessar serviços bancários ou realizar compras e que possuem pouca familiaridade com práticas de segurança digital."),
-  p("Para a validação da solução, o projeto atende um público menor, composto por dois a três familiares do autor. Por se tratar de um projeto desenvolvido individualmente, essa escolha viabiliza o contato direto com os usuários, a observação do uso da aplicação e a coleta de percepções em curto prazo."),
-  p([t("Perfil dos participantes: "), pend("[PENDENTE – informar, para cada participante, o grau de parentesco, a faixa etária, o dispositivo utilizado (celular ou computador), a familiaridade com a tecnologia e eventuais necessidades de acessibilidade, como uso de óculos ou dificuldade de leitura.]")]),
-  p("Considerando o perfil do público, a interface foi projetada com letras grandes, possibilidade de ampliação do texto, modo de alto contraste, botões amplos e linguagem direta. Espera-se que a solução contribua para que os participantes reconheçam os sinais mais comuns de golpe, criem senhas mais fortes e adotem a prática de confirmar pedidos suspeitos por um canal oficial, ganhando mais autonomia e segurança no uso da internet. O material também pode ser compartilhado pelos próprios participantes com amigos e outros familiares, ampliando o alcance da ação."),
+  p("O público-alvo do projeto é formado por adultos e idosos com pouca familiaridade com a internet, que utilizam celular ou computador para se comunicar, acessar serviços bancários ou realizar compras, mas conhecem pouco as práticas de segurança digital. Inicialmente, o projeto foi concebido apenas para pessoas idosas; como as participantes disponíveis para a validação tinham entre 40 e 45 anos, o público-alvo foi ampliado para manter a coerência entre a proposta e a comunidade efetivamente atendida."),
+  p("Por se tratar de um projeto desenvolvido individualmente, a validação foi realizada com um grupo pequeno, composto por duas familiares do autor, o que viabilizou o contato direto com as usuárias e a coleta de percepções em curto prazo. O Quadro 1 apresenta o perfil das participantes."),
+  legenda("Quadro 1 – Perfil das participantes da validação"),
+  quadro(["Participante", "Parentesco", "Idade", "Familiaridade com tecnologia"], [
+    ["Cintia Moura de Almeida Castro", "Mãe", "45 anos", "Iniciante"],
+    ["Priscila de Almeida Rocha", "Tia", "40 anos", "Iniciante"],
+  ], [3600, 1500, 1300, LARGURA_UTIL - 3600 - 1500 - 1300]),
+  fonteIlustr("Fonte: Elaborado pelo autor (2026)."),
+  p("Considerando o perfil do público, a interface foi projetada com letras grandes, possibilidade de ampliação do texto, modo de alto contraste, botões amplos e linguagem direta. Espera-se que a solução contribua para que os usuários reconheçam os sinais mais comuns de golpe, criem senhas mais fortes e adotem a prática de confirmar pedidos suspeitos por um canal oficial, ganhando mais autonomia e segurança no uso da internet. O material também pode ser compartilhado pelas próprias participantes com amigos e outros familiares, inclusive pessoas idosas, ampliando o alcance da ação."),
 ];
 
 const RF = [
@@ -268,66 +273,75 @@ const RF = [
   ["RF-008", "O sistema deve exibir o total de acertos ao final do questionário e permitir refazê-lo."],
   ["RF-009", "O sistema deve permitir aumentar e diminuir o tamanho do texto."],
   ["RF-010", "O sistema deve permitir ativar e desativar o modo de alto contraste."],
+  ["RF-011", "O sistema deve exibir as notícias mais recentes sobre golpes digitais, com título, veículo, data e link para a matéria original, e permitir atualizá-las."],
+  ["RF-012", "O sistema deve exibir links para materiais oficiais do CERT.br quando as notícias não puderem ser carregadas."],
+  ["RF-013", "O sistema deve permitir que o usuário sinalize um erro ou comente cada pergunta do questionário."],
 ];
 const RNF = [
   ["RNF-001", "A interface deve ser responsiva, adaptando-se a telas de celulares sem rolagem horizontal."],
-  ["RNF-002", "Os dados digitados pelo usuário não devem ser enviados pela rede; todo o processamento deve ocorrer no navegador."],
+  ["RNF-002", "Os dados digitados pelo usuário não devem ser enviados pela rede; a análise de senhas deve ocorrer apenas no navegador."],
   ["RNF-003", "O texto base deve ter, no mínimo, 20 pixels, e os botões devem ter área de toque mínima de 48 × 48 pixels."],
   ["RNF-004", "Todas as funções devem ser acessíveis por teclado, com indicação visível do elemento em foco."],
   ["RNF-005", "A aplicação deve funcionar em navegadores modernos sem necessidade de instalação ou cadastro."],
   ["RNF-006", "A aplicação deve ser hospedada em serviço gratuito de páginas estáticas (GitHub Pages)."],
-  ["RNF-007", "A interface deve utilizar linguagem simples e direta, adequada ao público idoso."],
+  ["RNF-007", "A interface deve utilizar linguagem simples e direta, adequada ao público-alvo."],
+  ["RNF-008", "A falha no carregamento das notícias não deve impedir o funcionamento das demais funcionalidades."],
 ];
 
 const cap4 = [
   h1("4 ESPECIFICAÇÃO DO SISTEMA E REQUISITOS"),
   p("Este capítulo descreve os requisitos, a arquitetura e a modelagem do sistema Navega Seguro."),
   h2("4.1 REQUISITOS FUNCIONAIS (RF)"),
-  p("O Quadro 1 apresenta os requisitos funcionais do sistema."),
-  legenda("Quadro 1 – Requisitos funcionais"),
+  p("O Quadro 2 apresenta os requisitos funcionais do sistema. Os requisitos RF-011 a RF-013 foram incluídos na segunda versão do sistema, a partir da evolução do projeto e do feedback recebido na validação."),
+  legenda("Quadro 2 – Requisitos funcionais"),
   quadro(["Código", "Descrição"], RF, [1500, LARGURA_UTIL - 1500]),
   fonteIlustr(),
   h2("4.2 REQUISITOS NÃO FUNCIONAIS (RNF)"),
-  p("O Quadro 2 apresenta os requisitos não funcionais do sistema."),
-  legenda("Quadro 2 – Requisitos não funcionais"),
+  p("O Quadro 3 apresenta os requisitos não funcionais do sistema."),
+  legenda("Quadro 3 – Requisitos não funcionais"),
   quadro(["Código", "Descrição"], RNF, [1500, LARGURA_UTIL - 1500]),
   fonteIlustr(),
   h2("4.3 ARQUITETURA DO SISTEMA E TECNOLOGIAS UTILIZADAS"),
-  p("O Navega Seguro adota uma arquitetura cliente, composta exclusivamente por arquivos estáticos executados no navegador do usuário. Não há servidor de aplicação nem banco de dados remoto: as categorias, as dicas e as perguntas do questionário são mantidas em uma estrutura de dados JavaScript, organizada conforme o modelo apresentado no DER. Essa decisão atende ao requisito de privacidade (RNF-002), reduz custos e simplifica a manutenção. A única informação armazenada é a preferência de tamanho de texto e de contraste, guardada localmente no próprio navegador (localStorage). O Quadro 3 resume a pilha tecnológica."),
-  legenda("Quadro 3 – Tecnologias utilizadas"),
+  p("O Navega Seguro adota uma arquitetura cliente, composta por arquivos estáticos executados no navegador do usuário, sem servidor de aplicação próprio nem banco de dados remoto. As categorias, as dicas e as perguntas do questionário são mantidas em uma estrutura de dados JavaScript, organizada conforme o modelo apresentado no DER. A única informação armazenada é a preferência de tamanho de texto e de contraste, guardada localmente no próprio navegador (localStorage)."),
+  p("A seção de notícias consulta o feed RSS do Google Notícias com uma busca por termos relacionados a golpes digitais. Como um site estático não pode ler diretamente um feed RSS de outro domínio, utiliza-se o serviço gratuito rss2json, que converte o feed para o formato JSON. Essa requisição não contém nenhum dado digitado pelo usuário, o que preserva o requisito RNF-002. Caso o serviço esteja indisponível, o sistema exibe links fixos para materiais oficiais do CERT.br (RF-012 e RNF-008). Já a função de sinalização abre, em uma nova aba, um formulário de registro de problemas (issue) no repositório do projeto no GitHub, previamente preenchido com a pergunta sinalizada. O Quadro 4 resume a pilha tecnológica."),
+  legenda("Quadro 4 – Tecnologias utilizadas"),
   quadro(["Camada", "Tecnologia"], [
     ["Front-end (estrutura)", "HTML5 semântico com atributos ARIA"],
     ["Front-end (apresentação)", "CSS3 com variáveis, Grid e Flexbox (layout responsivo)"],
     ["Front-end (comportamento)", "JavaScript (ES6), organizado em classes"],
     ["Dados", "Estrutura de dados em JavaScript (arquivo dados.js) e localStorage para preferências"],
+    ["Notícias", "Feed RSS do Google Notícias convertido pelo serviço rss2json"],
+    ["Sinalização de erros", "GitHub Issues"],
     ["Hospedagem", "GitHub Pages (gratuito)"],
     ["Versionamento", "Git e GitHub"],
     ["Testes", "Playwright (testes funcionais automatizados no navegador Chromium)"],
   ], [3200, LARGURA_UTIL - 3200]),
   fonteIlustr(),
-  p("Os arquivos do projeto estão organizados da seguinte forma: index.html (página principal), css/style.css (estilos), js/dados.js (dados), js/acessibilidade.js, js/dicas.js, js/senha.js e js/quiz.js (lógica de cada funcionalidade)."),
-  p([t("Endereço do repositório: "), pend("[PENDENTE – link do repositório no GitHub]"), t(". Endereço da aplicação publicada: "), pend("[PENDENTE – link do GitHub Pages]"), t(".")]),
+  p("Os arquivos do projeto estão organizados da seguinte forma: index.html (página principal), css/style.css (estilos), js/dados.js (dados), js/acessibilidade.js, js/dicas.js, js/senha.js, js/quiz.js e js/noticias.js (lógica de cada funcionalidade)."),
+  p("O código-fonte está disponível no repositório https://github.com/Kauan-moura-dev/navega-seguro, e a aplicação publicada pode ser acessada em https://kauan-moura-dev.github.io/navega-seguro/."),
   h2("4.4 MODELAGEM E DIAGRAMAS DE SISTEMA"),
-  p("A Figura 1 apresenta o diagrama de casos de uso. O ator Usuário, que representa a pessoa idosa, interage com as funcionalidades de consulta de dicas, verificação de senha, questionário e acessibilidade."),
+  p("A Figura 1 apresenta o diagrama de casos de uso. O ator Usuário interage com as funcionalidades de consulta de dicas, verificação de senha, questionário, notícias e acessibilidade."),
   ...figura("Figura 1 – Diagrama de casos de uso", "diagrama-casos-de-uso.png", 15),
-  p("A Figura 2 apresenta o diagrama de classes. As classes Acessibilidade, CatalogoDicas, VerificadorSenha e Quiz concentram a lógica de cada funcionalidade, enquanto Categoria, Dica e Pergunta representam os dados manipulados."),
+  p("A Figura 2 apresenta o diagrama de classes. As classes Acessibilidade, CatalogoDicas, VerificadorSenha, Quiz e FeedNoticias concentram a lógica de cada funcionalidade, enquanto Categoria, Dica, Pergunta e Noticia representam os dados manipulados."),
   ...figura("Figura 2 – Diagrama de classes", "diagrama-classes.png", 16),
-  p("A Figura 3 apresenta o Diagrama de Entidade-Relacionamento (DER). Uma categoria possui várias dicas e classifica várias perguntas, caracterizando dois relacionamentos do tipo um-para-muitos. Embora os dados sejam mantidos em JavaScript, o modelo permite a migração futura para um banco de dados relacional sem alteração da estrutura."),
+  p("A Figura 3 apresenta o Diagrama de Entidade-Relacionamento (DER). Uma categoria possui várias dicas e classifica várias perguntas, caracterizando dois relacionamentos do tipo um-para-muitos. As notícias não fazem parte do modelo de dados, pois são obtidas em tempo real de uma fonte externa e não são armazenadas. Embora os dados sejam mantidos em JavaScript, o modelo permite a migração futura para um banco de dados relacional sem alteração da estrutura."),
   ...figura("Figura 3 – Diagrama de Entidade-Relacionamento", "diagrama-der.png", 13),
-  p("As Figuras 4 a 7 apresentam as telas do sistema, que também cumprem a função de protótipo navegável da interface."),
-  ...figura("Figura 4 – Tela inicial e menu de navegação", "tela-inicio.png", 14),
+  p("As Figuras 4 a 8 apresentam as telas do sistema, que também cumprem a função de protótipo navegável da interface."),
+  ...figura("Figura 4 – Tela inicial com menu de navegação", "tela-inicio.png", 15),
   ...figura("Figura 5 – Verificador de força de senha", "tela-senha.png", 14),
-  ...figura("Figura 6 – Questionário “É golpe?” com explicação após a resposta", "tela-quiz-explicacao.png", 14),
-  ...figura("Figura 7 – Modo de alto contraste com texto ampliado", "tela-contraste.png", 14),
+  ...figura("Figura 6 – Questionário “É golpe?” com explicação e opção de sinalizar", "tela-quiz-explicacao.png", 14),
+  ...figura("Figura 7 – Seção de notícias e alertas recentes", "tela-noticias.png", 15),
+  ...figura("Figura 8 – Modo de alto contraste com texto ampliado", "tela-contraste.png", 15),
 ];
 
 const cronograma = [
   ["Definição do tema, levantamento de requisitos e modelagem", "01/11/2026", "Concluída"],
-  ["Desenvolvimento do site (HTML, CSS e JavaScript)", "01/11/2026", "Concluída"],
+  ["Desenvolvimento da primeira versão do site", "01/11/2026", "Concluída"],
   ["Testes funcionais automatizados e correções", "01/11/2026", "Concluída"],
   ["Elaboração da documentação (normas ABNT)", "01/11/2026", "Concluída"],
-  ["Publicação no GitHub e no GitHub Pages", "Previsto: até 08/11/2026", "Pendente"],
-  ["Testes com familiares e coleta de feedback", "Previsto: até 10/11/2026", "Pendente"],
+  ["Publicação no GitHub e no GitHub Pages", "01/11/2026", "Concluída"],
+  ["Testes com familiares e coleta de feedback", "01/11/2026", "Concluída"],
+  ["Segunda versão: novo design, notícias e sinalização", "01/11/2026", "Concluída"],
   ["Gravação do vídeo de apresentação", "Previsto: até 12/11/2026", "Pendente"],
   ["Revisão final e entrega no Google Sala de Aula", "Previsto: até 15/11/2026", "Pendente"],
 ];
@@ -335,9 +349,9 @@ const cronograma = [
 const cap5 = [
   h1("5 METODOLOGIA DE DESENVOLVIMENTO E CRONOGRAMA"),
   p("Para a organização do trabalho foi adotado o método Kanban, que se baseia na visualização do fluxo de trabalho e na limitação do trabalho em andamento, favorecendo entregas contínuas e a identificação de gargalos (ANDERSON, 2010). As tarefas foram distribuídas nas etapas A fazer, Em desenvolvimento e Concluído, e o acompanhamento foi registrado na planilha de distribuição de tarefas solicitada pela disciplina."),
-  p("O desenvolvimento seguiu uma abordagem incremental (SOMMERVILLE, 2018): inicialmente foram definidos os requisitos e a modelagem; em seguida, cada funcionalidade (dicas, verificador de senha, questionário e acessibilidade) foi implementada e testada separadamente antes de ser integrada à página principal."),
-  p("Por se tratar de um projeto individual, todas as funções foram exercidas pelo autor, Kauan Castro Moura: levantamento de requisitos, modelagem, desenvolvimento front-end, testes, documentação, publicação no GitHub, contato com os participantes e gravação do vídeo. O Quadro 4 apresenta o cronograma do projeto, de acordo com o prazo de entrega estabelecido pela disciplina."),
-  legenda("Quadro 4 – Cronograma do projeto"),
+  p("O desenvolvimento seguiu uma abordagem incremental (SOMMERVILLE, 2018). Na primeira versão foram implementados o catálogo de dicas, o verificador de senha, o questionário e os recursos de acessibilidade. Após a validação com as participantes, foi produzida uma segunda versão, com novo design visual, seção de notícias e opção de sinalizar erros no questionário. Cada funcionalidade foi implementada e testada separadamente antes de ser integrada à página principal."),
+  p("Por se tratar de um projeto individual, todas as funções foram exercidas pelo autor, Kauan Castro Moura: levantamento de requisitos, modelagem, desenvolvimento front-end, testes, documentação, publicação no GitHub, contato com as participantes e gravação do vídeo. O Quadro 5 apresenta o cronograma do projeto, de acordo com o prazo de entrega estabelecido pela disciplina."),
+  legenda("Quadro 5 – Cronograma do projeto"),
   quadro(["Etapa", "Período", "Situação"], cronograma, [LARGURA_UTIL - 2900 - 1500, 2900, 1500]),
   fonteIlustr(),
 ];
@@ -351,35 +365,49 @@ const testes = [
   ["T06", "Avaliar a senha “Cafe com bolo na varanda!”", "Classificada como forte", "Aprovado"],
   ["T07", "Mostrar e ocultar a senha", "Texto exibido e ocultado corretamente", "Aprovado"],
   ["T08", "Responder corretamente às 8 situações do questionário", "Explicação exibida a cada resposta; resultado “8 de 8”", "Aprovado"],
-  ["T09", "Aumentar o texto duas vezes", "Fonte base alterada de 20 px para 24 px", "Aprovado"],
-  ["T10", "Ativar o alto contraste", "Tema escuro com cores de alto contraste aplicado", "Aprovado"],
-  ["T11", "Abrir em tela de celular (390 px de largura)", "Sem rolagem horizontal", "Aprovado"],
-  ["T12", "Verificar erros de execução no console", "Nenhum erro registrado", "Aprovado"],
+  ["T09", "Gerar o link “Sinalizar” de uma pergunta", "Link para nova issue no GitHub preenchido com a pergunta", "Aprovado"],
+  ["T10", "Carregar as notícias", "6 notícias exibidas com veículo e data", "Aprovado"],
+  ["T11", "Simular falha no serviço de notícias", "Aviso exibido e 3 links oficiais do CERT.br apresentados", "Aprovado"],
+  ["T12", "Aumentar o texto duas vezes", "Fonte base alterada de 20 px para 24 px", "Aprovado"],
+  ["T13", "Ativar o alto contraste", "Tema escuro com cores de alto contraste aplicado", "Aprovado"],
+  ["T14", "Abrir em tela de celular (390 px de largura)", "Sem rolagem horizontal", "Aprovado"],
+  ["T15", "Verificar erros de execução no console", "Nenhum erro registrado", "Aprovado"],
 ];
 
 const cap6 = [
   h1("6 RESULTADOS OBTIDOS E TESTES DE SOFTWARE"),
-  p("Como resultado, foi entregue o portal Navega Seguro, com todas as funcionalidades especificadas no capítulo 4. As telas do sistema finalizado estão apresentadas nas Figuras 4 a 7, e a Figura 8 mostra a adaptação da interface à tela de um celular."),
-  ...figura("Figura 8 – Visualização em tela de celular", "tela-celular.png", 6),
-  h2("6.1 TESTES FUNCIONAIS"),
-  p("Os testes funcionais foram automatizados com a ferramenta Playwright, que executa a aplicação em um navegador real (Chromium) e simula as ações do usuário. O Quadro 5 apresenta os casos de teste executados e seus resultados."),
-  legenda("Quadro 5 – Casos de teste funcionais"),
+  p("Como resultado, foi entregue o portal Navega Seguro, com todas as funcionalidades especificadas no capítulo 4. As telas do sistema finalizado estão apresentadas nas Figuras 4 a 8, e a Figura 9 mostra a adaptação da interface à tela de um celular."),
+  ...figura("Figura 9 – Visualização em tela de celular", "tela-celular.png", 6),
+  new Paragraph({ heading: HeadingLevel.HEADING_2, pageBreakBefore: true, keepNext: true, spacing: { line: L15, before: 0, after: L15 }, children: [t("6.1 TESTES FUNCIONAIS", { bold: true })] }),
+  p("Os testes funcionais foram automatizados com a ferramenta Playwright, que executa a aplicação em um navegador real (Chromium) e simula as ações do usuário. O Quadro 6 apresenta os casos de teste executados na versão final e seus resultados."),
+  legenda("Quadro 6 – Casos de teste funcionais"),
   quadro(["ID", "Caso de teste", "Resultado obtido", "Situação"], testes, [700, 3500, LARGURA_UTIL - 700 - 3500 - 1300, 1300]),
   fonteIlustr(),
-  p("Durante os testes identificou-se que, no modo de alto contraste, o botão de ativação desse modo ficava com a mesma cor do cabeçalho, tornando-se pouco visível. O problema foi corrigido com um estilo específico para o botão ativo, e os testes foram executados novamente com sucesso."),
+  p("Durante os testes foram identificados dois problemas de visibilidade no modo de alto contraste: na primeira versão, o botão de ativação desse modo ficava com a mesma cor do cabeçalho; na segunda versão, a barra do menu assumia a cor amarela dos próprios links, tornando-os ilegíveis. Ambos foram corrigidos com estilos específicos, e os testes foram executados novamente com sucesso."),
   h2("6.2 VALIDAÇÃO COM O PÚBLICO-ALVO"),
-  p("A validação com o público-alvo foi planejada com dois a três familiares do autor. Cada participante utiliza o portal em seu próprio dispositivo, lê as dicas, testa uma senha de exemplo e responde ao questionário, sendo depois convidado a relatar suas percepções sobre a facilidade de uso, a clareza dos textos e a utilidade das informações."),
-  p([pend("[PENDENTE – relatar como foram os testes com cada participante: data, dispositivo usado, número de acertos no questionário, dificuldades observadas e se precisaram de ajuda.]")]),
-  p([pend("[PENDENTE – inserir os depoimentos ou feedbacks reais dos participantes, identificando-os apenas pelo grau de parentesco e pela idade, por exemplo: “Participante 1 (avó, 72 anos): ...”.]")]),
-  p([pend("[PENDENTE – descrever eventuais ajustes feitos no sistema a partir do feedback recebido.]")]),
+  p("A validação foi realizada em 1º de novembro de 2026 com as duas participantes apresentadas no Quadro 1. Cada participante utilizou o portal, leu as dicas, respondeu às oito situações do questionário “É golpe?” e, em seguida, enviou sua opinião sobre o site por mensagem de áudio. Os áudios foram transcritos pelo autor. O Quadro 7 apresenta o desempenho no questionário."),
+  legenda("Quadro 7 – Desempenho das participantes no questionário"),
+  quadro(["Participante", "Acertos", "Aproveitamento"], [
+    ["Cintia Moura de Almeida Castro (mãe, 45 anos)", "8 de 8", "100%"],
+    ["Priscila de Almeida Rocha (tia, 40 anos)", "6 de 8", "75%"],
+  ], [LARGURA_UTIL - 1800 - 2200, 1800, 2200]),
+  fonteIlustr(),
+  p("Ao avaliar o site, a participante Cintia Moura de Almeida Castro destacou a clareza das explicações e a importância de confirmar informações com o banco:"),
+  new Paragraph({ indent: { left: 4 * CM }, alignment: AlignmentType.JUSTIFIED, spacing: { line: L10, before: 120, after: 240 }, children: [t("Achei um site muito seguro e relevante, principalmente nas abordagens e explicações entre golpe e fraude. Primeiro consultar o banco antes de enviar qualquer tipo de documento ou site perigoso.", { size: 20 })] }),
+  p("A participante Priscila de Almeida Rocha considerou o conteúdo útil e apresentou uma sugestão de melhoria:"),
+  new Paragraph({ indent: { left: 4 * CM }, alignment: AlignmentType.JUSTIFIED, spacing: { line: L10, before: 120, after: 240 }, children: [
+    t("Achei o site Navega Seguro muito relevante e informativo. As informações disponibilizadas foram de grande ajuda, contribuindo para ampliar os meus conhecimentos e esclarecer dúvidas. Com certeza recomendaria o site para outras pessoas, pois acredito que o conteúdo pode ser útil para todos. Como sugestão de melhoria, seria interessante implementar uma opção que permitisse ao usuário ", { size: 20 }),
+    new TextRun({ text: "[CONFIRMAR: comentar]", font: FONTE, size: 20, highlight: "yellow", bold: true }),
+    t(" ou sinalizar respostas incorretas, possibilitando ajustes nas informações e tornando as ferramentas ainda mais confiáveis e eficientes.", { size: 20 })] }),
+  p("As duas avaliações foram positivas quanto à relevância e à clareza do conteúdo. Em resposta à sugestão recebida, foi implementado na segunda versão o recurso “Sinalizar erro ou comentar esta pergunta” (RF-013), disponível após cada resposta do questionário, além de um botão “Enviar sugestão” na seção Sobre do site. Na mesma versão, o autor também reformulou o design da página e incluiu a seção de notícias recentes sobre golpes (RF-011 e RF-012), com o objetivo de manter o conteúdo atualizado."),
 ];
 
 const cap7 = [
   h1("7 CONSIDERAÇÕES FINAIS"),
-  p("O objetivo geral deste projeto, desenvolver uma aplicação web funcional e acessível que auxilie pessoas idosas a reconhecer golpes digitais e a adotar práticas seguras na internet, foi atingido no que se refere ao desenvolvimento do software: os requisitos foram mapeados, a interface foi implementada com recursos de acessibilidade e todos os casos de teste funcionais foram aprovados."),
-  p([t("Quanto à validação com o público-alvo, "), pend("[PENDENTE – concluir, com base no feedback real dos familiares, se a aplicação foi considerada fácil de usar e útil, e se o objetivo específico de validação foi atingido.]")]),
-  p("Do ponto de vista acadêmico, o projeto permitiu aplicar na prática conteúdos do curso de Ciência da Computação, como levantamento de requisitos, modelagem UML, desenvolvimento web, testes de software e versionamento com Git. Do ponto de vista extensionista, evidenciou que a tecnologia precisa ser pensada a partir das necessidades reais do usuário: linguagem simples, letras grandes e exemplos do cotidiano mostraram-se tão importantes quanto o código."),
-  p("Como trabalhos futuros para uma versão 2.0, sugerem-se: a inclusão de leitura em voz alta do conteúdo; a ampliação do banco de situações do questionário, com atualização periódica a partir de novos golpes divulgados por fontes oficiais; a migração dos dados para um banco de dados relacional, seguindo o DER apresentado; a criação de um modo para impressão das dicas; e a realização de oficinas presenciais com grupos maiores de pessoas idosas."),
+  p("O objetivo geral deste projeto, desenvolver uma aplicação web funcional e acessível que auxilie adultos e idosos com pouca familiaridade com a internet a reconhecer golpes digitais e a adotar práticas seguras, foi atingido. Os requisitos foram mapeados, a interface foi implementada com recursos de acessibilidade, todos os casos de teste funcionais foram aprovados e a aplicação foi publicada gratuitamente na internet."),
+  p("A validação com as participantes indicou que o conteúdo foi considerado relevante, informativo e útil, e o desempenho no questionário, com oito e seis acertos em oito situações, mostrou que as explicações ajudam a diferenciar situações de golpe de práticas seguras. A sugestão recebida foi incorporada ao sistema, evidenciando o caráter dialógico da extensão universitária. Como limitação, destaca-se que a validação envolveu apenas duas pessoas, de 40 e 45 anos, sem a participação de pessoas idosas; por isso, os resultados não podem ser generalizados para todo o público-alvo."),
+  p("Do ponto de vista acadêmico, o projeto permitiu aplicar na prática conteúdos do curso de Ciência da Computação, como levantamento de requisitos, modelagem UML, desenvolvimento web, consumo de dados externos, testes de software e versionamento com Git. Do ponto de vista extensionista, evidenciou que a tecnologia precisa ser pensada a partir das necessidades reais do usuário: linguagem simples, letras grandes e exemplos do cotidiano mostraram-se tão importantes quanto o código."),
+  p("Como trabalhos futuros para uma versão 3.0, sugerem-se: a validação com um grupo maior, incluindo pessoas com 60 anos ou mais; a inclusão de leitura em voz alta do conteúdo; um canal de sinalização que não exija conta no GitHub, como um formulário simples; a ampliação do banco de situações do questionário; a migração dos dados para um banco de dados relacional, seguindo o DER apresentado; e a realização de oficinas presenciais com grupos da comunidade."),
   ...vazio(1),
   p([t("LINK DO VÍDEO NO YOUTUBE: ", { bold: true }), pend("[PENDENTE – inserir o link do vídeo explicando o funcionamento do projeto]")], { noIndent: true }),
 ];
@@ -417,7 +445,7 @@ const propsPagina = { page: { size: { width: 11906, height: 16838 }, margin: MAR
 
 const doc = new Document({
   creator: "Kauan Castro Moura",
-  title: "Navega Seguro: portal de segurança digital para pessoas idosas",
+  title: "Navega Seguro: portal de segurança digital para pessoas com pouca familiaridade com a internet",
   styles: {
     default: { document: { run: { font: FONTE, size: 24 } } },
     paragraphStyles: [

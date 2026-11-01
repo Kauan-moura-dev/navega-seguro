@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Navega Seguro: portal educativo de segurança digital para pessoas idosas.">
-  <title>Navega Seguro – Segurança Digital para Idosos</title>
+  <meta name="description" content="Navega Seguro: portal educativo de segurança digital para adultos e idosos com pouca familiaridade com a internet.">
+  <title>Navega Seguro – Segurança digital para todos</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +12,10 @@
 
   <header class="topo">
     <div class="container topo-linha">
-      <h1 class="marca">Navega Seguro</h1>
+      <a class="marca" href="#inicio" aria-label="Navega Seguro – início">
+        <svg class="marca-icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 4 7v8c0 7.5 5.1 13.4 12 15 6.9-1.6 12-7.5 12-15V7L16 2Z" fill="currentColor"/><path d="m10.5 16 4 4 7-8" fill="none" stroke="var(--fundo-topo)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Navega Seguro</span>
+      </a>
       <div class="acess" role="group" aria-label="Ferramentas de acessibilidade">
         <button type="button" id="btn-diminuir" aria-label="Diminuir o tamanho do texto">A−</button>
         <button type="button" id="btn-aumentar" aria-label="Aumentar o tamanho do texto">A+</button>
@@ -20,22 +23,49 @@
       </div>
     </div>
     <nav class="menu" aria-label="Menu principal">
-      <div class="container">
-        <a href="#inicio">Início</a>
+      <div class="container menu-linha">
         <a href="#dicas">Dicas</a>
         <a href="#senha">Testar senha</a>
         <a href="#quiz">É golpe?</a>
+        <a href="#noticias">Notícias</a>
+        <a href="#sobre">Sobre</a>
       </div>
     </nav>
   </header>
 
   <main id="conteudo">
     <!-- INÍCIO -->
-    <section id="inicio" class="secao destaque">
+    <section id="inicio" class="hero">
+      <div class="container hero-grade">
+        <div>
+          <p class="selo">Gratuito • Sem cadastro • Fácil de usar</p>
+          <h1>Use a internet com mais segurança e tranquilidade</h1>
+          <p class="hero-texto">Aprenda a reconhecer golpes, crie senhas fortes e acompanhe os alertas mais recentes. Tudo explicado de um jeito simples.</p>
+          <div class="hero-botoes">
+            <a class="botao primario" href="#quiz">Fazer o desafio “É golpe?”</a>
+            <a class="botao secundario" href="#dicas">Ver as dicas</a>
+          </div>
+        </div>
+        <aside class="regra-ouro" aria-label="Regra de ouro">
+          <h2>Regra de ouro</h2>
+          <ol>
+            <li><strong>Desconfie</strong> de pressa, ameaça ou pedido de dinheiro.</li>
+            <li><strong>Não passe</strong> senhas nem códigos recebidos por SMS.</li>
+            <li><strong>Confirme</strong> ligando você mesmo para o número oficial.</li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <!-- COMO USAR -->
+    <section class="secao passos-secao" aria-labelledby="titulo-passos">
       <div class="container">
-        <h2>Use a internet com mais segurança</h2>
-        <p>Este site foi feito para ajudar pessoas idosas a reconhecer golpes, criar senhas fortes e navegar com tranquilidade. Leia as dicas, teste uma senha e faça o desafio “É golpe?”.</p>
-        <p class="aviso"><strong>Importante:</strong> nada do que você digita neste site é enviado pela internet. O site guarda, apenas no seu aparelho, o tamanho de letra e o contraste escolhidos.</p>
+        <h2 id="titulo-passos">Como usar este site</h2>
+        <div class="passos">
+          <a class="passo" href="#dicas"><span class="passo-num">1</span><strong>Leia as dicas</strong><span>Escolha um assunto e veja orientações curtas.</span></a>
+          <a class="passo" href="#senha"><span class="passo-num">2</span><strong>Teste uma senha</strong><span>Descubra se uma senha de exemplo é forte.</span></a>
+          <a class="passo" href="#quiz"><span class="passo-num">3</span><strong>Faça o desafio</strong><span>Treine reconhecendo situações de golpe.</span></a>
+        </div>
       </div>
     </section>
 
@@ -43,25 +73,28 @@
     <section id="dicas" class="secao">
       <div class="container">
         <h2>Dicas de segurança</h2>
-        <p>Escolha um assunto para ver as dicas.</p>
+        <p class="intro">Escolha um assunto para ver as dicas.</p>
         <div id="filtro-categorias" class="filtros" role="group" aria-label="Filtrar dicas por assunto"></div>
         <div id="lista-dicas" class="cartoes" aria-live="polite"></div>
       </div>
     </section>
 
     <!-- SENHA -->
-    <section id="senha" class="secao">
+    <section id="senha" class="secao fundo-suave">
       <div class="container">
-        <h2>Teste a força de uma senha</h2>
-        <p>Digite uma senha de exemplo para ver se ela é fraca, média ou forte. <strong>Não digite a sua senha verdadeira.</strong></p>
-        <label for="campo-senha">Senha de exemplo</label>
-        <div class="linha-senha">
-          <input type="password" id="campo-senha" autocomplete="off" spellcheck="false">
-          <button type="button" id="btn-mostrar" aria-pressed="false">Mostrar</button>
+        <div class="painel">
+          <h2>Teste a força de uma senha</h2>
+          <p>Digite uma senha de exemplo para ver se ela é fraca, média ou forte. <strong>Não digite a sua senha verdadeira.</strong></p>
+          <label for="campo-senha">Senha de exemplo</label>
+          <div class="linha-senha">
+            <input type="password" id="campo-senha" autocomplete="off" spellcheck="false">
+            <button type="button" id="btn-mostrar" aria-pressed="false">Mostrar</button>
+          </div>
+          <div class="barra" aria-hidden="true"><div id="barra-forca"></div></div>
+          <p id="resultado-senha" class="resultado" aria-live="polite">Digite algo para começar.</p>
+          <ul id="sugestoes-senha" class="sugestoes"></ul>
+          <p class="nota">A análise acontece apenas no seu aparelho. Nada do que você digita é enviado pela internet.</p>
         </div>
-        <div class="barra" aria-hidden="true"><div id="barra-forca"></div></div>
-        <p id="resultado-senha" class="resultado" aria-live="polite">Digite algo para começar.</p>
-        <ul id="sugestoes-senha" class="sugestoes"></ul>
       </div>
     </section>
 
@@ -69,16 +102,45 @@
     <section id="quiz" class="secao">
       <div class="container">
         <h2>Desafio: É golpe?</h2>
-        <p>Leia cada situação e responda se é golpe ou se é seguro.</p>
+        <p class="intro">Leia cada situação e responda se é golpe ou se é seguro.</p>
         <div id="area-quiz" class="quiz" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- NOTÍCIAS -->
+    <section id="noticias" class="secao fundo-suave">
+      <div class="container">
+        <div class="titulo-linha">
+          <h2>Notícias e alertas recentes</h2>
+          <button type="button" id="btn-atualizar-noticias">Atualizar</button>
+        </div>
+        <p class="intro">Notícias sobre golpes digitais publicadas por veículos de imprensa, reunidas automaticamente pelo Google Notícias. Ao clicar, a notícia abre no site do veículo.</p>
+        <p id="status-noticias" class="nota" aria-live="polite">Carregando notícias...</p>
+        <div id="lista-noticias" class="noticias"></div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="secao">
+      <div class="container sobre">
+        <div>
+          <h2>Sobre o projeto</h2>
+          <p>O Navega Seguro é um Projeto de Extensão do curso de Ciência da Computação da Universidade Nove de Julho (UNINOVE), desenvolvido por Kauan Castro Moura em 2026. O objetivo é ajudar adultos e idosos com pouca familiaridade com a internet a se protegerem de golpes digitais.</p>
+          <p>As orientações seguem a Cartilha de Segurança para Internet do CERT.br.</p>
+        </div>
+        <div class="cartao">
+          <h3>Encontrou algum erro?</h3>
+          <p>Use o botão “Sinalizar” no desafio ou envie sua sugestão. Sua opinião ajuda a melhorar o site.</p>
+          <a class="botao secundario" id="link-sugestao" href="https://github.com/Kauan-moura-dev/navega-seguro/issues/new?title=Sugest%C3%A3o%20para%20o%20site" target="_blank" rel="noopener">Enviar sugestão</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="rodape">
     <div class="container">
-      <p>Em caso de dúvida, desligue e ligue você mesmo para o número oficial do banco ou da empresa. Nunca compartilhe códigos recebidos por SMS.</p>
-      <p>Projeto de Extensão – Ciência da Computação – UNINOVE – 2026</p>
+      <p><strong>Em caso de dúvida:</strong> desligue e ligue você mesmo para o número oficial do banco ou da empresa. Nunca compartilhe códigos recebidos por SMS.</p>
+      <p>Projeto de Extensão – Ciência da Computação – UNINOVE – 2026 · <a href="https://cartilha.cert.br/fasciculos/" target="_blank" rel="noopener">Cartilha de Segurança para Internet (CERT.br)</a></p>
     </div>
   </footer>
 
@@ -87,5 +149,6 @@
   <script src="js/dicas.js"></script>
   <script src="js/senha.js"></script>
   <script src="js/quiz.js"></script>
+  <script src="js/noticias.js"></script>
 </body>
 </html>
