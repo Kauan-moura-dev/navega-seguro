@@ -2,6 +2,8 @@
 
 Portal web educativo e acessível de segurança digital para pessoas idosas.
 
+**Acesse:** https://kauan-moura-dev.github.io/navega-seguro/
+
 Projeto de Extensão em Desenvolvimento de Software – Curso de Ciência da Computação – Universidade Nove de Julho (UNINOVE), 2026.
 
 - **Autor:** Kauan Castro Moura – RA 2223202665
