@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Navega Seguro: portal educativo de segurança digital para pessoas idosas.">
+  <title>Navega Seguro – Segurança Digital para Idosos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="container topo-linha">
+      <h1 class="marca">Navega Seguro</h1>
+      <div class="acess" role="group" aria-label="Ferramentas de acessibilidade">
+        <button type="button" id="btn-diminuir" aria-label="Diminuir o tamanho do texto">A−</button>
+        <button type="button" id="btn-aumentar" aria-label="Aumentar o tamanho do texto">A+</button>
+        <button type="button" id="btn-contraste" aria-pressed="false">Alto contraste</button>
+      </div>
+    </div>
+    <nav class="menu" aria-label="Menu principal">
+      <div class="container">
+        <a href="#inicio">Início</a>
+        <a href="#dicas">Dicas</a>
+        <a href="#senha">Testar senha</a>
+        <a href="#quiz">É golpe?</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- INÍCIO -->
+    <section id="inicio" class="secao destaque">
+      <div class="container">
+        <h2>Use a internet com mais segurança</h2>
+        <p>Este site foi feito para ajudar pessoas idosas a reconhecer golpes, criar senhas fortes e navegar com tranquilidade. Leia as dicas, teste uma senha e faça o desafio “É golpe?”.</p>
+        <p class="aviso"><strong>Importante:</strong> nada do que você digita neste site é enviado pela internet. O site guarda, apenas no seu aparelho, o tamanho de letra e o contraste escolhidos.</p>
+      </div>
+    </section>
+
+    <!-- DICAS -->
+    <section id="dicas" class="secao">
+      <div class="container">
+        <h2>Dicas de segurança</h2>
+        <p>Escolha um assunto para ver as dicas.</p>
+        <div id="filtro-categorias" class="filtros" role="group" aria-label="Filtrar dicas por assunto"></div>
+        <div id="lista-dicas" class="cartoes" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- SENHA -->
+    <section id="senha" class="secao">
+      <div class="container">
+        <h2>Teste a força de uma senha</h2>
+        <p>Digite uma senha de exemplo para ver se ela é fraca, média ou forte. <strong>Não digite a sua senha verdadeira.</strong></p>
+        <label for="campo-senha">Senha de exemplo</label>
+        <div class="linha-senha">
+          <input type="password" id="campo-senha" autocomplete="off" spellcheck="false">
+          <button type="button" id="btn-mostrar" aria-pressed="false">Mostrar</button>
+        </div>
+        <div class="barra" aria-hidden="true"><div id="barra-forca"></div></div>
+        <p id="resultado-senha" class="resultado" aria-live="polite">Digite algo para começar.</p>
+        <ul id="sugestoes-senha" class="sugestoes"></ul>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="secao">
+      <div class="container">
+        <h2>Desafio: É golpe?</h2>
+        <p>Leia cada situação e responda se é golpe ou se é seguro.</p>
+        <div id="area-quiz" class="quiz" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Em caso de dúvida, desligue e ligue você mesmo para o número oficial do banco ou da empresa. Nunca compartilhe códigos recebidos por SMS.</p>
+      <p>Projeto de Extensão – Ciência da Computação – UNINOVE – 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/acessibilidade.js"></script>
+  <script src="js/dicas.js"></script>
+  <script src="js/senha.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

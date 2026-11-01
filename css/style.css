@@ -1,0 +1,102 @@
+/* Navega Seguro – folha de estilos
+   Fonte base grande, alto contraste disponível e áreas de toque amplas (mín. 44px). */
+:root {
+  --fundo: #ffffff;
+  --texto: #1a1a1a;
+  --primaria: #0b4f8a;
+  --primaria-clara: #e6f0fa;
+  --ok: #1e6b2e;
+  --alerta: #8a5a00;
+  --perigo: #a11d1d;
+  --borda: #c7ced6;
+  --tam-base: 20px;
+}
+body.contraste {
+  --fundo: #000000;
+  --texto: #ffffff;
+  --primaria: #ffd400;
+  --primaria-clara: #1a1a1a;
+  --ok: #7dff8a;
+  --alerta: #ffd400;
+  --perigo: #ff7b7b;
+  --borda: #ffffff;
+}
+* { box-sizing: border-box; }
+html { font-size: var(--tam-base); scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--fundo);
+}
+.container { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+h1, h2, h3 { line-height: 1.25; }
+h2 { font-size: 1.6rem; color: var(--primaria); margin-top: 0; }
+a { color: var(--primaria); }
+:focus-visible { outline: 4px solid #ff9800; outline-offset: 2px; }
+
+.pular { position: absolute; left: -9999px; }
+.pular:focus { left: 16px; top: 16px; background: var(--primaria); color: var(--fundo); padding: 12px; z-index: 10; }
+
+.topo { background: var(--primaria); color: #fff; }
+body.contraste .topo { color: #000; }
+.topo-linha { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding-top: 12px; padding-bottom: 12px; }
+.marca { margin: 0; font-size: 1.6rem; }
+.acess { display: flex; gap: 8px; flex-wrap: wrap; }
+
+button {
+  font: inherit;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 8px 16px;
+  border: 2px solid var(--borda);
+  border-radius: 8px;
+  background: var(--fundo);
+  color: var(--texto);
+  cursor: pointer;
+}
+button:hover { background: var(--primaria-clara); }
+button[aria-pressed="true"] { background: var(--primaria); color: var(--fundo); border-color: var(--primaria); }
+body.contraste .topo button[aria-pressed="true"] { background: #000; color: #ffd400; border-color: #000; text-decoration: underline; }
+
+.menu { background: var(--primaria-clara); border-bottom: 2px solid var(--borda); }
+.menu .container { display: flex; flex-wrap: wrap; gap: 4px 20px; padding-top: 8px; padding-bottom: 8px; }
+.menu a { display: inline-block; padding: 8px 4px; font-weight: bold; text-decoration: none; min-height: 44px; }
+.menu a:hover { text-decoration: underline; }
+
+.secao { padding: 40px 0; border-bottom: 1px solid var(--borda); }
+.destaque { background: var(--primaria-clara); }
+.aviso { border-left: 6px solid var(--ok); padding: 8px 16px; background: var(--fundo); }
+
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.cartoes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.cartao { border: 2px solid var(--borda); border-radius: 12px; padding: 16px; background: var(--fundo); }
+.cartao h3 { margin: 0 0 8px; font-size: 1.15rem; }
+.cartao .categoria { font-size: 0.8rem; text-transform: uppercase; color: var(--primaria); font-weight: bold; }
+
+label { display: block; font-weight: bold; margin-bottom: 6px; }
+.linha-senha { display: flex; gap: 8px; flex-wrap: wrap; }
+input[type="password"], input[type="text"] {
+  font: inherit;
+  flex: 1 1 240px;
+  min-height: 48px;
+  padding: 8px 12px;
+  border: 2px solid var(--borda);
+  border-radius: 8px;
+  background: var(--fundo);
+  color: var(--texto);
+}
+.barra { height: 16px; background: var(--primaria-clara); border: 1px solid var(--borda); border-radius: 8px; margin: 16px 0 8px; overflow: hidden; }
+#barra-forca { height: 100%; width: 0; transition: width .3s; }
+.resultado { font-size: 1.2rem; font-weight: bold; }
+.fraca { color: var(--perigo); } .media { color: var(--alerta); } .forte { color: var(--ok); }
+.sugestoes li { margin-bottom: 4px; }
+
+.quiz { border: 2px solid var(--borda); border-radius: 12px; padding: 20px; }
+.quiz .progresso { font-size: 0.9rem; }
+.quiz .botoes { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+.quiz .botoes button { flex: 1 1 160px; font-weight: bold; }
+.explicacao { padding: 12px 16px; border-radius: 8px; border-left: 6px solid var(--primaria); background: var(--primaria-clara); }
+
+.rodape { padding: 24px 0; font-size: 0.9rem; }
